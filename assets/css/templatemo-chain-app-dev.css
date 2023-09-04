@@ -995,6 +995,10 @@ Services Style
   border-radius: 10px;
   border-top-right-radius: 50px;
   transition: all .3s;
+  background-image: url(../images/service-bg.jpg);
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .service-item .icon {
@@ -1004,6 +1008,7 @@ Services Style
   width: 50px;
   height: 50px;
   transition: all .3s;
+  
 }
 
 .service-item h4 {
@@ -1011,59 +1016,61 @@ Services Style
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 15px;
+  color: #ffffff;
 }
 
 .service-item p {
   transition: all .3s;
   font-size: 15px;
   margin-bottom: 20px;
+  color: #ffffff;
 }
 
-.service-item:hover h4,
+/* .service-item:hover h4,
 .service-item:hover p,
 .service-item:hover .text-button a {
   color: #fff;
-}
+} */
 
-.first-service .icon {
+/* .first-service .icon {
   background-image: url(../images/service-icon-01.png);
-}
-
-.first-service:hover .icon {
+} */
+ 
+.first-service .icon {
   background-image: url(../images/service-icon-hover-01.png);
-}
+} 
+
+/* .second-service .icon {
+  background-image: url(../images/service-icon-02.png);
+} */
 
 .second-service .icon {
-  background-image: url(../images/service-icon-02.png);
-}
-
-.second-service:hover .icon {
   background-image: url(../images/service-icon-hover-02.png);
 }
 
 
-.third-service .icon {
+/* .third-service .icon {
   background-image: url(../images/service-icon-03.png);
-}
+}  */
 
-.third-service:hover .icon {
+ .third-service .icon {
   background-image: url(../images/service-icon-hover-03.png);
-}
+} 
 
 .fourth-service .icon {
   background-image: url(../images/service-icon-04.png);
 }
 
-.fourth-service:hover .icon {
+/* .fourth-service:hover .icon {
   background-image: url(../images/service-icon-hover-04.png);
-}
+} */
 
-.service-item:hover {
+/* .service-item:hover {
   background-image: url(../images/service-bg.jpg);
   background-position: right top;
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */ 
 
 
 
@@ -2196,7 +2203,7 @@ responsive
 
 .flip-card-container {
   position: relative;
-  left:   -30px;
+  left:   -20px;
     --hue: 150;
     --primary: hsl(var(--hue), 50%, 50%);
     --white-1: hsl(0, 0%, 90%);
@@ -2340,6 +2347,25 @@ figcaption {
     width: 6px;
     border-left-color: var(--primary);
     border-right-color: var(--primary);
+  }
+  
+  @media (max-width: 500px) {
+    .flip-card-container {
+      text-align: center; /* Center-align the flip cards */
+      margin: 0 auto; /* Center horizontally */
+    }
+  
+    .flip-card {
+      display: block; /* Display flip cards as block elements */
+      margin: 0 auto;
+      left : 45px;
+    /* Center horizontally */
+    }
+    .flip-card-container:hover .flip-card,
+    .flip-card-container:focus-within .flip-card {
+      transform: rotateY(180deg);
+      left : 75px;
+    }
   }
   
  
