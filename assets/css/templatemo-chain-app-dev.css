@@ -2220,7 +2220,7 @@ responsive
   }
   .flip-card {
     width: 310px; /* Set a fixed width for each flip card */
-    height: 500px;
+    height: 640px;
     margin: 30px; 
   
     display: inline-block; /* Display flip cards horizontally */
@@ -2359,6 +2359,7 @@ figcaption {
       display: block; /* Display flip cards as block elements */
       margin: 0 auto;
       left : 45px;
+      height: 600px;
     /* Center horizontally */
     }
     .flip-card-container:hover .flip-card,
