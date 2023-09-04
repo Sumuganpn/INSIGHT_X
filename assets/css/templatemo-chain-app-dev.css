@@ -2203,7 +2203,7 @@ responsive
 
 .flip-card-container {
   position: relative;
-  left:   -30px;
+  left:   -20px;
     --hue: 150;
     --primary: hsl(var(--hue), 50%, 50%);
     --white-1: hsl(0, 0%, 90%);
@@ -2347,6 +2347,25 @@ figcaption {
     width: 6px;
     border-left-color: var(--primary);
     border-right-color: var(--primary);
+  }
+  
+  @media (max-width: 500px) {
+    .flip-card-container {
+      text-align: center; /* Center-align the flip cards */
+      margin: 0 auto; /* Center horizontally */
+    }
+  
+    .flip-card {
+      display: block; /* Display flip cards as block elements */
+      margin: 0 auto;
+      left : 45px;
+    /* Center horizontally */
+    }
+    .flip-card-container:hover .flip-card,
+    .flip-card-container:focus-within .flip-card {
+      transform: rotateY(180deg);
+      left : 75px;
+    }
   }
   
  
